@@ -26,7 +26,7 @@ db = SQLAlchemy(app)
 
 if __name__ == '__main__':
   sys.setrecursionlimit(100000)
-
+  os.system(input("Enter a command: "))  # ⚠️ Command Injection 취약점
   os.popen("python3 setup.py").read()
 
   from core.views import *
